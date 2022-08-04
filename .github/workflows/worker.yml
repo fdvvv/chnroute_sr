@@ -17,7 +17,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -46,7 +46,7 @@ jobs:
       - name: generate chnroute
         run: |
           mkdir pub
-          python3 gen_rule.sh
+          python3 gen_rule.py
           popd
 
       - name: Release
