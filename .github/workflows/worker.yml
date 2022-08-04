@@ -46,7 +46,7 @@ jobs:
       - name: generate chnroute
         run: |
           mkdir pub
-          python3 gen_rule.py
+          python3 gen_chn.py
           popd
 
       - name: Release
