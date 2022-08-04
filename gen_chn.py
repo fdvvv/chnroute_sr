@@ -53,7 +53,7 @@ def update_ip():
     logger.info('writing to file')
 
     with open(save_to_file, 'wt') as f:
-        f.writelines([f'IP-CIDR {x}\n' for x in ipNetwork_list])
+        f.writelines([f'IP-CIDR,{x}\n' for x in ipNetwork_list])
 
     with open(save_to_file4, 'wt') as f:
         f.writelines([f'{x}\n' for x in ipNetwork_list4])
